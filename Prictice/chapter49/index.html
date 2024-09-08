@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Reading Field Values In JavaScript</h1>
+  
+  <!-- Simple form with an email input field -->
+  <form action="" onsubmit="checkAddress('email')">
+    <!-- Input field for email -->
+    <input type="email" id="email">
+    <!-- Submit button for form -->
+    <input type="submit">
+  </form>
+
+  <script>
+
+    // // Function to check the email address input
+    // function checkAddress(fieldValue){
+    //   // Get the value of the input field using its ID (passed as fieldValue)
+    //   var value = document.getElementById(fieldValue).value;
+
+    //   // Check if the input field is empty
+    //   if(value === ""){
+    //     // If empty, show an alert message indicating that the email is required
+    //     alert("Email is required");
+    //   }else{
+    //     // If not empty, show an alert with the entered email address
+    //     alert(`You entered email address: ${value}`);
+    //   }
+    // }
+
+
+// You can write also the code 
+    // Function to check the value of an input field by its ID
+function checkAddress(fieldValue) {
+  
+  // Check if the value of the input field is empty
+  if (document.getElementById(fieldValue).value === "") {
+    
+    // If the input field is empty, show an alert notifying the user that email is required
+    alert("Email is required");
+
+  } else {
+    
+    // If the input field is not empty, retrieve the value and display it in an alert
+    alert(`You entered email is: ${document.getElementById(fieldValue).value}`);
+    
+  }
+}
+
+
+  </script>
+</body>
+</html>
+
+
